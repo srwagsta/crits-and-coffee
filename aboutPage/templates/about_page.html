@@ -1,0 +1,342 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% load compress %}
+
+{% block body %}
+    <!-- Preloader -->
+                <div id="preloader">
+                    <div id="status">&nbsp;</div>
+                </div>
+
+
+
+    <section class="services" id="SERVICE">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 text-center">
+                    <div class="single_service wow fadeInUp" data-wow-delay="1s">
+                        <i class="fa fa-gears fa-fw"></i>
+                        <h2>Design</h2>
+                        <p>Beautiful layouts and built through planning and team collaboration.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="single_service wow fadeInUp" data-wow-delay="2s">
+                        <i class="fa fa-code fa-fw"></i>
+                        <h2>Development</h2>
+                        <p>Good development is built through the use of best practices, solid testing, and building with maintenance in mind.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="single_service wow fadeInUp" data-wow-delay="3s">
+                        <i class="fa fa-flash fa-fw"></i>
+                        <h2>Optimize</h2>
+                        <p>Not all situations are built the same, and tailoring the code is key. Reducing bottlenecks, increasing compression, and optimizing readability.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="single_service wow fadeInUp" data-wow-delay="4s">
+                        <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+                        <h2>Dynamic</h2>
+                        <p>Alive by design. Dynamically collecting content, living pages, software is no longer boring!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="section_divider">
+    	<section class="header parallax home-parallax page" id="fun_facts" style="background-position: 50% -150px;">
+	        <div class="section_overlay">
+
+	        </div>
+	    </section>
+    </div>
+
+
+    <section class="about_us_area" id="ABOUT">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="about_title">
+                        <h2>About Me</h2>
+                        <img src="{% static 'img/about_shape.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4  wow fadeInLeft animated">
+                    <div class="single_progress_bar">
+                        <h2>DESIGN - 70%</h2>
+                        <div class="progress">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                            <span class="sr-only">60% Complete</span>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="single_progress_bar">
+                        <h2>DEVELOPMENT - 60%</h2>
+                        <div class="progress">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                            <span class="sr-only">60% Complete</span>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="single_progress_bar">
+                        <h2>Optimization - 80%</h2>
+                        <div class="progress">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
+                            <span class="sr-only">60% Complete</span>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="single_progress_bar">
+                        <h2>Teamwork - 95%</h2>
+                        <div class="progress">
+                          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 95%;">
+                            <span class="sr-only">60% Complete</span>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4  wow fadeInRight animated">
+                    <p class="about_us_p">A North Carolina native with a passion for moving forward. I always strive to be the best in
+                    everything I do. Originally I stated my education at North Carolina State University in Textiles Chemistry, but later I moved to Milwaukee
+                    to follow professional cycling and my true passion, software development. </p>
+                </div>
+                <div class="col-md-4  wow fadeInRight animated">
+                    <p class="about_us_p">Currently I am finishing my studies in Computer Science at University Wisconsin: Milwaukee and continuing my passion
+                     for cycling through racing with Project Echelon Elite Cycling Team. While also working on some software development projects, including the
+                     Instagram map used on this site. These projects are open to use and feel free to contribute! </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="testimonial text-center wow fadeInUp animated" id="TESTIMONIAL">
+        <div class="container">
+            <div class="quote_container">
+                <div class="owl-carousel">
+                    <div class="single_testimonial text-center wow fadeInUp animated">
+                        <p>Software is a great combination between artistry and engineering.</p>
+                        <h4>-Bill Gates</h4>
+                    </div>
+                    <div class="single_testimonial text-center">
+                        <p>When I first got into technology I didn't really understand what open source was.</br>
+                            Once I started writing software, I realized how important this would be.</p>
+                        <h4>-Matt Mullenweg</h4>
+                    </div>
+                    <div class="single_testimonial text-center">
+                        <p>The only source of knowledge is experience.</p>
+                        <h4>-Albert Einstein</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="section_divider">
+    	<section class="header parallax home-parallax page" id="section_divider" style="background-position: 50% -150px;">
+	        <div class="section_overlay">
+
+	        </div>
+	    </section>
+    </div>
+
+
+    <section class="work_area" id="WORK">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="work_title  wow fadeInUp animated">
+                        <h1>Latest Adventures</h1>
+                        <img src="{% static 'img/about_shape.png' %}" alt="">
+                        <p>Check out what I have been up to recently!<br>
+                            If it's a great adventure on the bike or a new restaurant in my backyard, keep up with my happenings right here.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 no_padding">
+                    <div class="single_image">
+                        <img src="{{ adventure1.image_url }}" alt="">
+                        <div class="image_overlay">
+                            <a href="{{ adventure1.link }}">Get the full picture</a>
+                            <h2> <!-- Title here --> </h2>
+                            <h4>
+                                <!-- I would like to put #tags here -->
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 no_padding">
+                    <div class="single_image">
+                        <img src="{{ adventure2.image_url }}" alt="">
+                        <div class="image_overlay">
+                            <a href="{{ adventure2.link }}">Get the full picture</a>
+                            <h2> <!-- Title here --> </h2>
+                            <h4>
+                                <!-- I would like to put #tags here -->
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 no_padding">
+                    <div class="single_image">
+                        <img src="{{ adventure3.image_url }}" alt="">
+                        <div class="image_overlay">
+                            <a href="{{ adventure3.link }}">Get the full picture</a>
+                            <h2> <!-- Title here --> </h2>
+                            <h4>
+                                <!-- I would like to put #tags here -->
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="row pad_top">
+                    <div class="col-md-4 no_padding">
+                        <div class="single_image">
+                            <img src="{{ adventure4.image_url }}" alt="">
+                            <div class="image_overlay">
+                                <a href="{{ adventure4.link }}">Get the full picture</a>
+                                <h2> <!-- Title here --> </h2>
+                                <h4>
+                                    <!-- I would like to put #tags here -->
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 no_padding">
+                        <div class="single_image">
+                            <img src="{{ adventure5.image_url }}" alt="">
+                            <div class="image_overlay">
+                                <a href="{{ adventure5.link }}">Get the full picture</a>
+                                <h2> <!-- Title here --> </h2>
+                                <h4>
+                                    <!-- I would like to put #tags here -->
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 no_padding">
+                        <div class="single_image">
+                            <img src="{{ adventure6.image_url }}" alt="">
+                            <div class="image_overlay">
+                                <a href="{{ adventure6.link }}">Get the full picture</a>
+                                <h2> <!-- Title here --> </h2>
+                                <h4>
+                                    <!-- I would like to put #tags here -->
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="call_to_action">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 wow fadeInLeft animated">
+                    <div class="left">
+                        <h2>LOOKING FOR A DEVELOPER OR HAVE QUESTIONS?</h2>
+                        <p>Have questions about my projects? Looking for a dedicated developer for a new team?
+                            I'm always looking for new connections and opportunities.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-md-offset-1 wow fadeInRight animated">
+                    <div class="baton">
+	                    <a href="#CONTACT">
+	                        <button type="button" class="btn btn-primary cs-btn">Let's Talk</button>
+	                    </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="section_divider">
+    	<section class="header parallax home-parallax page" id="section_divider" style="background-position: 50% -150px;">
+	        <div class="section_overlay">
+
+	        </div>
+	    </section>
+    </div>
+
+
+    <section class="contact" id="CONTACT">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="contact_title  wow fadeInUp animated">
+                        <h1>get in touch</h1>
+                        <img src="{% static 'img/about_shape.png' %}" alt="">
+                        <p>I'm always looking for good opportunities and connections. If you have questions about any </br>
+                            of my current projects reach out to me. If you would like to know more about Project Echelon or how you </br>
+                            can get involved? Just send me a message and I'll make sure you get in touch with the right people! </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3  wow fadeInLeft animated">
+                    <div class="single_contact_info">
+                        <h2>Email Me</h2>
+                        <p>srwagsta@gmail.com</p>
+                    </div>
+                    <div class="single_contact_info">
+                        <h2>Follow Me</h2>
+                        <p>@critsandcoffee</p>
+                    </div>
+                </div>
+                <div class="col-md-9  wow fadeInRight animated">
+                    <form class="contact-form" action="">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" id="name" placeholder="Name">
+                                <input type="email" class="form-control" id="email" placeholder="Email">
+                                <input type="text" class="form-control" id="subject" placeholder="Subject">
+                            </div>
+                            <div class="col-md-6">
+                                <textarea class="form-control" id="message" rows="25" cols="10" placeholder="  Message Texts..."></textarea>
+                                <button type="button" class="btn btn-default submit-btn form_submit">SEND MESSAGE</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="work-with   wow fadeInUp animated">
+                        <h3>looking forward to hearing from you!</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    {% compress js %}
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/jquery.nicescroll.js' %}"></script>
+        <script src="{% static 'js/owl.carousel.js' %}"></script>
+        <script src="{% static 'js/wow.js' %}"></script>
+        <script src="{% static 'js/script.js' %}"></script>
+    {% endcompress %}
+
+{% endblock %}

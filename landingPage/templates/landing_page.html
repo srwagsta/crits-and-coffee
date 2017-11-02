@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% load compress %}
+
+{% block body %}
+        <!-- Header -->
+    <header class="intro-header">
+      <div class="container">
+        <div class="intro-message">
+          <h1 class="title-tags wow fadeInUp" >Stephen R. Wagstaff</h1>
+          <h3 class="title-tags wow fadeInUp" data-wow-delay="1s">Software Developer - Professional Cyclist - Foodie</h3>
+          <hr class="intro-divider">
+          <ul class="list-inline intro-social-buttons ">
+            <li class="list-inline-item wow fadeInUp" data-wow-delay="2s">
+              <a href="https://www.instagram.com/critsandcoffee/" target="_blank" class="btn btn-secondary btn-lg">
+                <i class="fa fa-instagram fa-fw"></i>
+                <span class="network-name">Instagram</span>
+              </a>
+            </li>
+            <li class="list-inline-item wow fadeInUp" data-wow-delay="2s">
+              <a href="https://github.com/srwagsta" target="_blank" class="btn btn-secondary btn-lg">
+                <i class="fa fa-github fa-fw"></i>
+                <span class="network-name">Github</span>
+              </a>
+            </li>
+            <li class="list-inline-item wow fadeInUp" data-wow-delay="2s">
+              <a href="https://www.linkedin.com/in/srwagsta" target="_blank" class="btn btn-secondary btn-lg">
+                <i class="fa fa-linkedin fa-fw"></i>
+                <span class="network-name">Linkedin</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page Content -->
+    <section class="content-section-a">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 ml-auto wow fadeInRight animated">
+            <hr class="section-heading-spacer">
+            <div class="clearfix"></div>
+            <h2 class="section-heading">Check me out on Instagram:<br>#Foodie</h2>
+            <p class="lead">As I travel the country as a cyclist I taste some of the best food! Check out my
+                page as I update it with quick pics from the best restaurants around the country! <br/><br/> ... Or follow
+              <a class="embedded_link" target="_blank" href="https://www.instagram.com/runheidiann/">my better half</a>
+              for a more stylish touch.</p>
+          </div>
+          <div class="col-lg-5 mr-auto wow fadeInLeft animated">
+            <img class="img-fluid" src='{{foodie_post.image_url}}' alt="">
+          </div>
+        </div>
+
+      </div>
+      <!-- /.container -->
+    </section>
+
+    <section class="content-section-b">
+
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-5 mr-auto order-lg-2 wow fadeInRight animated">
+            <hr class="section-heading-spacer">
+            <div class="clearfix"></div>
+              <img class="img-fluid" src='{{cycling_post.image_url}}' alt="">
+          </div>
+          <div class="col-lg-5 ml-auto order-lg-1  wow fadeInLeft animated">
+              <h2 class="section-heading">Come to the races!</h2>
+              <p class="lead">During the summer I spend my free time racing for
+              <a class="embedded_link" target="_blank" href="http://www.projectechelonracing.com/">Project Echelon Racing Team!</a>
+                  We race to support veteran athletes as they recover from mental disorders through physical activity.
+                  Come find us at races around the nation and ask us more about it! <br/><br/>Head over to my cycling page to see more and find
+              a race near you!</p>
+
+          </div>
+        </div>
+
+      </div>
+      <!-- /.container -->
+
+    </section>
+    <!-- /.content-section-b -->
+
+    <section class="content-section-a">
+
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-5 ml-auto  wow fadeInLeft animated">
+            <hr class="section-heading-spacer">
+            <div class="clearfix"></div>
+            <h2 class="section-heading">Follow some of my professional projects on GitHub or right here!</h2>
+            <p class="lead">As a firm believer in open source content I will always post my personal
+                development projects, free for you to use! You can also follow some of my projects right here!
+                <br/><br/>
+              <a class="embedded_link" target="_blank" href="https://www.djangoproject.com/">Also, check out the Django Project</a> to see the framework
+                I used here and support Django!</p>
+          </div>
+          <div class="col-lg-5 mr-auto  wow fadeInRight animated">
+            <img class="img-fluid" src= '{{professional_pic}}' alt="">
+          </div>
+        </div>
+
+      </div>
+      <!-- /.container -->
+
+    </section>
+    <!-- /.content-section-a -->
+
+    <!-- This footer is just to make sure the bottom nav bar doesn't cover content -->
+    <footer> </footer>
+    {% compress js %}
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/owl.carousel.js' %}"></script>
+        <script src="{% static 'js/wow.js' %}"></script>
+        <script src="{% static 'js/script.js' %}"></script>
+    {% endcompress %}
+
+{% endblock %}

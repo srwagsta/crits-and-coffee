@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% load compress %}
+
+{% block body %}
+    <body onload="initMap();">
+        <div id="map"></div>
+    </body>
+
+    <!-- Mostly a useless compress but the function is need for the
+    google API to stay calm -->
+    {% compress js %}
+        <script type="text/javascript">function initMap() {}</script>
+    {% endcompress %}
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCz06-33g2SS0YMw3KbahKheX9YOABBrWs&callback=initMap"> </script>
+    {% compress js %}
+        <script src="{% static 'js/Rich.js' %}"> </script>
+        <script src="{% static 'js/markercluster.js' %}"></script>
+        <script src="{% static 'js/oms.min.js' %}"></script>
+        <script type="text/javascript">
+            initMap = function() {
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 10,
+                    center:{ lat: {{client_lat}}, lng: {{client_lng}}}
+                    });
+                var markers = [];
+                var oms = new OverlappingMarkerSpiderfier(map, {
+                    markersWontMove: true,
+                    markersWontHide: true,
+                    circleFootSeparation: 200,
+                    spiralLengthFactor: 40
+                });
+
+                oms.addListener('click', function(marker) {
+                    infoWindow.setContent(marker.desc);
+                    infoWindow.open(map, marker);
+                });
+                {% for marker in posts %}
+                    var richMarkerHtml= '<div class="richMarkerDiv"><a target="_blank" href="{{marker.link}}">'+
+                                        '<img style="position:relative;margin:7px;width:60px;height:60px;border-radius:40px;"'+
+                                        'src="{{marker.image_url}}">'+
+                                        '</img></a></div>';
+                    var marker = new RichMarker({
+                        map: map,
+                        flat: true,
+                        position: new google.maps.LatLng( {{marker.loc_point.y}}, {{marker.loc_point.x}} ),
+                        draggable: false,
+                        content: richMarkerHtml,
+                    });
+                    oms.addMarker(marker);
+                    markers.push(marker);
+                {% endfor %}
+                var markerCluster = new MarkerClusterer(map, markers, {imagePath: '{% static 'img/m/m' %}',
+                    maxZoom: 15,
+                });
+
+            } //end initMap function
+        </script>
+
+    {% endcompress %}
+{% endblock %}

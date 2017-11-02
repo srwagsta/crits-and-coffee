@@ -1,0 +1,115 @@
+{% extends 'bootstrap3/bootstrap3.html' %}
+
+{% load staticfiles %}
+
+{% load bootstrap3 %}
+
+{% load bootstrap_themes %}
+
+{% load compress %}
+
+{% bootstrap_styles theme='simplex' type='min.css' %}
+
+{% block bootstrap3_extra_head %}
+     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/> <!-- font for the footer icons -->
+    {% compress css %}
+        <!-- 404 style -->
+        <link href="{% static 'css/404_style.css' %}" rel="stylesheet" type="text/css">
+        <!-- Base HTML Style -->
+        <link href="{% static 'css/base.css' %}" rel="stylesheet" type="text/css">
+        <!-- About HTML style -->
+        <link rel="stylesheet" href="{% static 'css/preloader.css' %}" type="text/css" media="screen, print"/>
+        <link rel="stylesheet" href="{% static 'css/about_style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
+        <link rel="stylesheet" href="{% static 'css/owl.theme.default.css' %}">
+        <!-- landing HTML style -->
+        <link href="{% static 'css/landing_style.css' %}" rel="stylesheet" type="text/css">
+        <!-- Animate CSS -->
+        <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+        <!-- Map HTML style -->
+        <link href="{% static 'css/map_style.css' %}" rel="stylesheet" type="text/css">
+    {% endcompress %}
+    <!-- favicon insert -->
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" >
+
+{% endblock %}
+
+{% block bootstrap3_title %}
+    {% block title %}
+        {{ page|title }}
+    {% endblock %}
+{% endblock %}
+
+{% block bootstrap3_content %}
+<!--
+          _________ _______  _______    _______  _______  _
+|\     /|\__   __/(  ____ )(  ____ \  (       )(  ____ \( )
+| )   ( |   ) (   | (    )|| (    \/  | () () || (    \/| |
+| (___) |   | |   | (____)|| (__      | || || || (__    | |
+|  ___  |   | |   |     __)|  __)     | |(_)| ||  __)   | |
+| (   ) |   | |   | (\ (   | (        | |   | || (      (_)
+| )   ( |___) (___| ) \ \__| (____/\  | )   ( || (____/\ _
+|/     \|\_______/|/   \__/(_______/  |/     \|(_______/(_)
+ ________  _________  _______   ________  ___  ___  _______   ________
+|\   ____\|\___   ___\\  ___ \ |\   __  \|\  \|\  \|\  ___ \ |\   ___  \
+\ \  \___|\|___ \  \_\ \   __/|\ \  \|\  \ \  \\\  \ \   __/|\ \  \\ \  \
+ \ \_____  \   \ \  \ \ \  \_|/_\ \   ____\ \   __  \ \  \_|/_\ \  \\ \  \
+  \|____|\  \   \ \  \ \ \  \_|\ \ \  \___|\ \  \ \  \ \  \_|\ \ \  \\ \  \
+    ____\_\  \   \ \__\ \ \_______\ \__\    \ \__\ \__\ \_______\ \__\\ \__\
+   |\_________\   \|__|  \|_______|\|__|     \|__|\|__|\|_______|\|__| \|__|
+   \|_________|
+ ___       __   ________  ________  ________  _________  ________  ________ ________
+|\  \     |\  \|\   __  \|\   ____\|\   ____\|\___   ___\\   __  \|\  _____\\  _____\
+\ \  \    \ \  \ \  \|\  \ \  \___|\ \  \___|\|___ \  \_\ \  \|\  \ \  \__/\ \  \__/
+ \ \  \  __\ \  \ \   __  \ \  \  __\ \_____  \   \ \  \ \ \   __  \ \   __\\ \   __\
+  \ \  \|\__\_\  \ \  \ \  \ \  \|\  \|____|\  \   \ \  \ \ \  \ \  \ \  \_| \ \  \_|
+   \ \____________\ \__\ \__\ \_______\____\_\  \   \ \__\ \ \__\ \__\ \__\   \ \__\
+    \|____________|\|__|\|__|\|_______|\_________\   \|__|  \|__|\|__|\|__|    \|__|
+ Email: srwagsta@gmail.com            \|_________|
+-->
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+            <a class="navbar-brand" href="/">Crits & Coffee</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse pull-right">
+          <ul class="nav navbar-nav">
+              <li class="travels"><a href="/travel">Travels & Foodie Map</a></li>
+              <li><a href="/cycling" >Cycling</a></li>
+              <li><a href="/projects">Projects</a></li>
+              <li><a href="/about">About / Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    {% block body %}
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 col-sm-12 maincontent">
+                Welcome to my page!
+            </div>
+        </div>
+    {% endblock %}
+    <div class="row text-center navbar footer">
+       <div class="col-md-12 wow fadeInRight animated">
+            <div class="container text-left">
+                <small style="color:grey" class="copyright">Copyright &copy 2017 Stephen Wagstaff</small>
+                <a href="https://www.instagram.com/critsandcoffee/" target="_blank"><small class="fa fa-lg fa-instagram pull-right "></small></a>
+                <a href="https://www.linkedin.com/in/srwagsta" target="_blank"><small class="fa fa-lg fa-linkedin pull-right"></small></a>
+                <a href="https://www.facebook.com/srwagsta/" target="_blank"><small class="fa fa-lg fa-facebook pull-right"></small></a>
+            </div><!--End container -->
+       </div>
+    </div>
+
+{% endblock %}
+
+
+{% compress js %}
+    <script src="{% static 'js/wow.js' %}"></script>
+{% endcompress %}
