@@ -1,0 +1,29 @@
+/* Always set the map height explicitly to define the size of the div
+* element that contains the map. */
+html, body, #map {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 15px; /* Ensures the bottom function buttons on the map are still accessible */
+}
+div.richMarkerDiv {
+    background-image: url('../img/map_marker.png');
+    width: 75px;
+    height: 104px;
+}
+.clickable {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+div.richMarkerDiv:hover {
+    background-image: url('../img/map_marker_hoover.png');
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.5);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.5);
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.5);
+    transition: all 200ms ease-in;
+    transform: scale(1.5);
+}
