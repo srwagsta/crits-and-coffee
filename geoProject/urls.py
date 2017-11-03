@@ -21,5 +21,6 @@ urlpatterns = [
     url(r'^$', include('landingPage.urls')),
     url(r'^travel', include('instaMap.urls')),
     url(r'^about', include('aboutPage.urls')),
+    url(r'^projects', include('projects.urls')),
 ]
 handler404 = 'views.custom_404'

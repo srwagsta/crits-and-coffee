@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'instaMap',
     'aboutPage',
     'landingPage',
+    'projects',
 ]
 
 MIDDLEWARE = [

@@ -36,11 +36,12 @@ def show_about(request):
         email = EmailMessage(
             "New contact form submission",
             content,
-            "Your website" + '',
-            ['youremail@gmail.com'],
+            "Your website" + 'www.critsandcoffee.com',
+            ['srwagsta@gmail.com'],
             headers={'Reply-To': contact_email}
         )
         email.send()
+        # maybe redirect to a quick loading screen and then back to the home page?
         return redirect('contact')
 
     context = {
