@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib.gis import admin
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -22,5 +24,5 @@ urlpatterns = [
     url(r'^travel', include('instaMap.urls')),
     url(r'^about', include('aboutPage.urls')),
     url(r'^projects', include('projects.urls')),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 handler404 = 'views.custom_404'
