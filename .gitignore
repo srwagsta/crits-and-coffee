@@ -1,4 +1,4 @@
-\ Byte-compiled / optimized / DLL files
+\\ Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
@@ -169,3 +169,8 @@ fabric.properties
 
 static/
 private/
+media/
+
+geoProject/settings.py
+geoProject/settings.pyc
+
