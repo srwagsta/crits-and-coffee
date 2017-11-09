@@ -171,6 +171,4 @@ static/
 private/
 media/
 
-geoProject/settings.py
-geoProject/settings.pyc
-
+!geoProject/static

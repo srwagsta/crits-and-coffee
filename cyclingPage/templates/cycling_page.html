@@ -7,6 +7,8 @@
 {% block bootstrap3_extra_head %}
      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/> <!-- font for the footer icons -->
     {% compress css %}
+        <!-- Construction Style -->
+        <link href="{% static 'css/construction_style.css' %}" rel="stylesheet" type="text/css">
 
         <!-- Base HTML Style -->
         <link href="{% static 'css/base.css' %}" rel="stylesheet" type="text/css">
@@ -23,7 +25,14 @@
         <div id="status">&nbsp;</div>
     </div>
 
-    <h1>THIS IS JUST A TEST</h1>
+    <div class="content">
+        <div class="content-grid">
+            <h1>UNDER CONSTRUCTION</h1>
+            <h2> We are hard at work building, check back soon!<br/><br/>
+            While you wait check out all the detail of this project on the About page!</h2>
+        </div>
+    </div>
+
 
     {% compress js %}
         <script src="{% static 'js/jquery.min.js' %}"></script>
