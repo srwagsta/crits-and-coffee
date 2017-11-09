@@ -9,7 +9,7 @@
 /*Services*/
 .services{
 	padding-top: 75px;
-	background: url(../img/services-bg.jpg);
+	background: url(../img/about_divider-bg.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 }
@@ -116,7 +116,7 @@ padding-top: 110px;
 
 /*section divider*/
 .section_divider{
-	background: url(../img/services-bg.jpg);
+	background: url(../img/about_divider-bg.jpg);
 	background-attachment: fixed !important;
 	background-repeat: repeat;
 	
