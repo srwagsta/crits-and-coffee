@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% load compress %}
+
+{% block bootstrap3_extra_head %}
+     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/> <!-- font for the footer icons -->
+    {% compress css %}
+
+        <!-- Base HTML Style -->
+        <link href="{% static 'css/base.css' %}" rel="stylesheet" type="text/css">
+         <!-- Animate CSS -->
+        <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    {% endcompress %}
+    <!-- favicon insert -->
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" >
+{% endblock %}
+
+{% block body %}
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="status">&nbsp;</div>
+    </div>
+
+    <h1>THIS IS JUST A TEST</h1>
+
+    {% compress js %}
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/jquery.nicescroll.js' %}"></script>
+        <script src="{% static 'js/owl.carousel.js' %}"></script>
+        <script src="{% static 'js/wow.js' %}"></script>
+        <script src="{% static 'js/script.js' %}"></script>
+    {% endcompress %}
+
+{% endblock %}

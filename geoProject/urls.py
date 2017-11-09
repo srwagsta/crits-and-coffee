@@ -25,6 +25,7 @@ urlpatterns = [
     url(r'^travel', include('instaMap.urls')),
     url(r'^about', include('aboutPage.urls')),
     url(r'^projects', include('projects.urls')),
+    url(r'^cycling', include('cyclingPage.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 handler404 = 'geoProject.views.custom_404'

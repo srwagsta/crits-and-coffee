@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'aboutPage',
     'landingPage',
     'projects',
+    'cyclingPage',
 ]
 
 MIDDLEWARE = [
