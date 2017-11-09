@@ -4,6 +4,19 @@
 
 {% load compress %}
 
+{% block bootstrap3_extra_head %}
+     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/> <!-- font for the footer icons -->
+    {% compress css %}
+
+        <!-- Base HTML Style -->
+        <link href="{% static 'css/base.css' %}" rel="stylesheet" type="text/css">
+         <!-- Animate CSS -->
+        <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    {% endcompress %}
+    <!-- favicon insert -->
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" >
+{% endblock %}
+
 {% block body %}
     <!-- Preloader -->
     <div id="preloader">

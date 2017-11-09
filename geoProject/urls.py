@@ -18,6 +18,7 @@ from django.contrib.gis import admin
 from django.conf.urls.static import static
 from django.conf import settings
 
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', include('landingPage.urls')),
@@ -26,4 +27,4 @@ urlpatterns = [
     url(r'^projects', include('projects.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-handler404 = 'views.custom_404'
+handler404 = 'geoProject.views.custom_404'
