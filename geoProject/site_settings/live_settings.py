@@ -151,13 +151,14 @@ GEOIP_PATH = os.path.join(BASE_DIR, 'instaMap/data/geoip2')
 GEOIP_COUNTRY = 'GeoLite2-Country.mmdb'
 GEOIP_CITY = 'GeoLite2-City.mmdb'
 # Email config for the contact form
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'srwagsta@gmail.com'
-EMAIL_HOST_PASSWORD = 'Heidilove210'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+DEFAULT_FROM_EMAIL = 'srwagsta@gmail.com'
 EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+EMAIL_HOST_USER = 'srwagsta@gmail.com'
+EMAIL_HOST_PASSWORD = open(os.path.join(BASE_DIR, 'private/email_password.txt', 'r').readline())
+
 
 
 
