@@ -25,7 +25,11 @@ SECRET_KEY = '3yctod@&q!gp^jh0p%#z-b7@)h_hez98*&_g5m(lbb%69zzdum'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['18.216.197.199',
+                 'critsandcoffee.com',
+                 'www.critsandcoffee.com',
+                 'localhost',
+                 ]
 
 
 # Application definition
@@ -89,6 +93,7 @@ DATABASES = {
         'NAME': 'crits_site',
         'USER': 'django',
         'PASSWORD': 'liveTime',
+        'HOST': 'localhost'
     }
 }
 
