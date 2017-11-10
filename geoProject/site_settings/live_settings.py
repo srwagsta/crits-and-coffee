@@ -29,6 +29,7 @@ ALLOWED_HOSTS = ['18.216.197.199',
                  'critsandcoffee.com',
                  'www.critsandcoffee.com',
                  'localhost',
+                 '192.168.1.11',
                  ]
 
 
