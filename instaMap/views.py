@@ -16,7 +16,7 @@ def get_client_ip(request):
 
 def show_map(request):
     client_ip = get_client_ip(request)
-    client_ip = '74.120.152.136'  # This line will have to be remove when it goes live
+    # client_ip = '74.120.152.136'  # This line will have to be remove when it goes live
     client_pnt = GeoIP2().geos(client_ip)
     context = {
         'client_lat': client_pnt.y,
