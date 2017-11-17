@@ -16,8 +16,7 @@ def show_about(request):
     form_class = ContactForm
 
     if request.method == 'POST':
-        form = form_class(data=request.POST)
-
+        form = form_class(request.POST)
         if form.is_valid():
             contact_name = request.POST.get('contact_name', '')
             contact_email = request.POST.get('contact_email', '')
@@ -26,11 +25,11 @@ def show_about(request):
             # Email the profile with the
             # contact information
             template = get_template('contact_template.txt')
-        context = Context({
+        context = {
             'contact_name': contact_name,
             'contact_email': contact_email,
             'form_content': form_content,
-        })
+        }
         content = template.render(context)
 
         email = EmailMessage(
@@ -42,7 +41,7 @@ def show_about(request):
         )
         email.send()
         # maybe redirect to a quick loading screen and then back to the home page?
-        return redirect('contact')
+        return redirect('/about')
 
     context = {
         'form': form_class,

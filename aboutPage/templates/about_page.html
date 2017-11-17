@@ -317,22 +317,27 @@
                         <p>@critsandcoffee</p>
                     </div>
                 </div>
-                <div class="col-md-9  wow fadeInRight animated">
-                    <form class="contact-form" action="">
-                        {% csrf_token %}
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div> {{ form.contact_name }} </div>
-                                <div> {{ form.contact_email }} </div>
-                                <div> {{ form.contact_subject }} </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div> {{form.content }}</div>
-                                <button type="submit" class="btn btn-default submit-btn form_submit">SEND MESSAGE</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+                <!--<div class="col-md-9  wow fadeInRight animated">-->
+                    <!--<form class="contact-form" action="/about/" method="post">-->
+                        <!--{% csrf_token %}-->
+                        <!--<div class="row">-->
+                            <!--<div class="col-md-6">-->
+                                <!--<input id="contact_name" type="text" name="contact_name" value="{{ forms.contact_name }}">-->
+                                <!--<div> {{ form.contact_email }} </div>-->
+                                <!--<div> {{ form.contact_subject }} </div>-->
+                            <!--</div>-->
+                            <!--<div class="col-md-6">-->
+                                <!--<div> {{form.content }}</div>-->
+                                <!--<button type="submit" class="btn btn-default submit-btn form_submit">SEND MESSAGE</button>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</form>-->
+                <!--</div>-->
+                <form action="/about/" method="post">
+                    {% csrf_token %}
+                    {{ form }}
+                    <input type="submit" value="Submit" />
+                </form>
             </div>
         </div>
         <div class="container">

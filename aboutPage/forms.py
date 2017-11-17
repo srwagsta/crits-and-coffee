@@ -10,4 +10,5 @@ class ContactForm(forms.Form):
     contact_subject = forms.CharField(required=True, widget=forms.TextInput(
         attrs={'class': 'form-control', 'placeholder': 'Subject'}))
     content = forms.CharField(required=True, widget=forms.Textarea(
-        attrs={'class': 'form-control', 'id': 'message', 'rows': '25', 'cols': '10', 'placeholder': '  Message Text...'}))
+        attrs={'class': 'form-control', 'id': 'message', 'rows': '25', 'cols': '10',
+               'placeholder': '  Message Text...'}))
