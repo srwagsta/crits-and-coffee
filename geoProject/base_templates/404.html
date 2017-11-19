@@ -5,18 +5,9 @@
 
 {% load compress %}
 
-{% block bootstrap3_extra_head %}
-     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/> <!-- font for the footer icons -->
-    {% compress css %}
-        <!-- 404 style -->
-        <link href="{% static 'css/404_style.css' %}" rel="stylesheet" type="text/css">
-        <!-- Base HTML Style -->
-        <link href="{% static 'css/base.css' %}" rel="stylesheet" type="text/css">
-         <!-- Animate CSS -->
-        <link rel="stylesheet" href="{% static 'css/animate.css' %}">
-    {% endcompress %}
-    <!-- favicon insert -->
-    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" >
+{% block template_css %}
+    <!-- 404 style -->
+    <link href="{% static 'css/404_style.css' %}" rel="stylesheet" type="text/css">
 {% endblock %}
 
 {% block body %}

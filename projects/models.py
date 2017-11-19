@@ -9,10 +9,10 @@ from django.dispatch.dispatcher import receiver
 
 
 class Project(models.Model):
-    proj_name = models.TextField(max_length=20, default='')
+    proj_name = models.CharField(max_length=50, default='')
     description = models.TextField(default='')
-    website = models.TextField(default='')
-    repository = models.TextField(default='')
+    website = models.TextField(default='', blank=True)
+    repository = models.TextField(default='', blank=True)
     start_date = models.DateField(default=date.today)
     image = models.ImageField(upload_to='project_images', default=None)
     image_thumbnail = ImageSpecField(source='image',

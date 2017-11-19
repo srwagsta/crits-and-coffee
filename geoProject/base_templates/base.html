@@ -13,6 +13,8 @@
 {% block bootstrap3_extra_head %}
      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/> <!-- font for the footer icons -->
     {% compress css %}
+        {% block template_css %}
+        {% endblock %}
         <!-- Base HTML Style -->
         <link href="{% static 'css/base.css' %}" rel="stylesheet" type="text/css">
         <!-- Animate CSS -->
@@ -21,6 +23,8 @@
     <!-- favicon insert -->
     <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" >
 
+    {% block template_bonus_head %}
+    {% endblock %}
 {% endblock %}
 
 {% block bootstrap3_title %}
