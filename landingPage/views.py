@@ -7,7 +7,7 @@ from django.shortcuts import render
 def show_landing(request):
     instance_posts = Post.objects.filter(tags__contains='foodie')
     if instance_posts > 0:
-        foodie_post = instance_posts[0]
+        foodie_post = instance_posts[len(instance_posts)-1]
     else:
         foodie_post = Post.objects.get(pk=1)
 
