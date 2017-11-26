@@ -13,7 +13,7 @@ def show_landing(request):
 
     instance_posts = Post.objects.filter(tags__contains='cycling')
     if instance_posts > 0:
-        cycling_post = instance_posts[0]
+        cycling_post = instance_posts[len(instance_posts)-1]
     else:
         cycling_post = Post.objects.get(pk=1)
 
